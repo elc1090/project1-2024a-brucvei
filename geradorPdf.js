@@ -1,4 +1,4 @@
-document.getElementById("generatePdfBtn").addEventListener("click", function () {
+document.getElementById("generatePDF").addEventListener("click", function () {
   // Create a instancia jspdf
   const doc = new jspdf.jsPDF();
   doc.setFontSize(12);
@@ -13,35 +13,34 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
 
 
   //chamar valores
-  const nomeAluno = document.getElementById("nomeAluno").value;
-  const nomeProfessor = document.getElementById("nomeProfessor").value;
-  const dataValue = document.getElementById("data").value;
-  const hora = document.getElementById("hora").value;
-  const nomeAvaliador1 = document.getElementById("nomeAvaliador1").value;
-  const nomeAvaliador2 = document.getElementById("nomeAvaliador2").value;
+  const titulo = document.getElementById("titulo").value;
+  const aluno = document.getElementById("aluno").value;
+  const orientador = document.getElementById("orientador").value;
+  const avaliador1 = document.getElementById("avaliador1").value;
+  const avaliador2 = document.getElementById("avaliador2").value;
   const curso = document.getElementById("curso").value;
-  const notaFinal = document.getElementById("notaFinal").value;
-  const dataFim = document.getElementById("dataFim").value;
+  const nota = document.getElementById("nota").value;
+  const dataValue = document.getElementById("data").value;
   const sala = document.getElementById("sala").value;
-  const titulo = document.getElementById("tituloTrabalho").value;
+  const dataFim = document.getElementById("data-final").value;
 
 
 
   //Assinatura img
-  const assinaturaProf = document.getElementById("assinaturaOr");
+  const assinaturaProf = document.getElementById("assinatura-orientador");
   const imgProf = assinaturaProf.toDataURL("image/png");
 
-  const assinaturaAval1 = document.getElementById("assinaturaAval1");
+  const assinaturaAval1 = document.getElementById("assinatura-avaliador1");
   const imgAval1 = assinaturaAval1.toDataURL("image/png");
 
-  const assinaturaAval2 = document.getElementById("assinaturaAval2");
+  const assinaturaAval2 = document.getElementById("assinatura-avaliador2");
   const imgAval2 = assinaturaAval2.toDataURL("image/png");
 
-  const assinaturaAl = document.getElementById("assinaturaAl");
+  const assinaturaAl = document.getElementById("assinatura-estudante");
   const imgAl = assinaturaAl.toDataURL("image/png");
   //
 
-  if (nomeAluno === "" || nomeProfessor === "" || dataValue === "" ||nomeAvaliador1 === "" ||nomeAvaliador2 === "" ||curso === "" ||notaFinal === "" ||dataFim === "" ||sala === "" ||titulo === "" || assinaturaAl == null) {
+  if (aluno === "" || orientador === "" || dataValue === "" || avaliador1 === "" || avaliador2 === "" || curso === "" || nota === "" || dataFim === "" || sala === "" || titulo === "") {
     alert("Por favor, preencha todos os campos.");
     return false;
   }
@@ -59,6 +58,7 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
   const mes = data.getMonth() + 1;
   const mesExt = numeroParaMes(mes);
   const ano = data.getFullYear();
+  const hora = data.toLocaleTimeString();
 
   const diaF = dataF.getDate();
   const mesF = dataF.getMonth() + 1;
@@ -67,20 +67,18 @@ document.getElementById("generatePdfBtn").addEventListener("click", function () 
 
 
   const Texto = `
-    Aos ${dia} dias do mês de ${mesExt} de ${ano} às ${hora}, na sala ${sala}, realizou-se o Exame da Defesa do Trabalho de Conclusão de Curso intitulado: ${titulo}, de autoria de ${nomeAluno}, acadêmico (a) do Curso de Graduação em ${curso} da UFSM.
-    A Banca Examinadora esteve constituída por ${nomeProfessor}, professor(a) orientador(a) do Trabalho de Conclusão de Curso, e por ${nomeAvaliador1} e  ${nomeAvaliador2}, membros avaliadores. O(a) acadêmico(a) recebeu a nota final ${notaFinal}. Foi concedido até a data de ${diaF} do mês de ${mesExtF} de ${anoF} para o(a) acadêmico(a) realizar as alterações sugeridas pela Banca Examinadora e entregar o trabalho em sua redação definitiva. E para constar foi lavrada a presente Ata, que será assinada pelos membros da Banca Examinadora e pelo(a) acadêmico(a).
+    Aos ${dia} dias do mês de ${mesExt} de ${ano} às ${hora}, na sala ${sala}, realizou-se o Exame da Defesa do Trabalho de Conclusão de Curso intitulado: ${titulo}, de autoria de ${aluno}, acadêmico (a) do Curso de Graduação em ${curso} da UFSM.
+    A Banca Examinadora esteve constituída por ${orientador}, professor(a) orientador(a) do Trabalho de Conclusão de Curso, e por ${avaliador1} e  ${avaliador2}, membros avaliadores. O(a) acadêmico(a) recebeu a nota final ${nota}. Foi concedido até a data de ${diaF} do mês de ${mesExtF} de ${anoF} para o(a) acadêmico(a) realizar as alterações sugeridas pela Banca Examinadora e entregar o trabalho em sua redação definitiva. E para constar foi lavrada a presente Ata, que será assinada pelos membros da Banca Examinadora e pelo(a) acadêmico(a).
   `;
 
   const local = `
     Santa Maria, RS ${dia} de ${mesExt} de ${ano} 
   `;
 
-
-
+  
   // Função para dividir o texto em várias linhas
   function splitText(text, maxWidth) {
-    const splitText = doc.splitTextToSize(text, maxWidth);
-    return splitText;
+    return doc.splitTextToSize(text, maxWidth);
   }
 
   const maxWidth = 177; // Largura máxima do texto

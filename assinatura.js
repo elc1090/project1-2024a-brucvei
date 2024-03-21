@@ -2,7 +2,6 @@
 function iniciarCanvas(canvasId) {
   var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext("2d");
-  var assinaturaImagem = document.getElementById("assinaturaImagem");
 
   var desenhando = false;
   var xAnterior = 0;
@@ -71,22 +70,14 @@ function iniciarCanvas(canvasId) {
 }
 
 // Chame a função para cada campo canvas que você deseja inicializar
-iniciarCanvas("assinaturaOr");
-iniciarCanvas("assinaturaAl");
-iniciarCanvas("assinaturaAval1");
-iniciarCanvas("assinaturaAval2");
+iniciarCanvas("assinatura-estudante");
+iniciarCanvas("assinatura-orientador");
+iniciarCanvas("assinatura-avaliador1");
+iniciarCanvas("assinatura-avaliador2");
 
 // Função para limpar a assinatura de um campo canvas
 function limparAssinatura(canvasId) {
   var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-// Chame a função de limpeza para cada campo canvas que você deseja limpar
-function limparTodasAsAssinaturas() {
-  limparAssinatura("assinaturaOr");
-  limparAssinatura("assinaturaAl");
-  limparAssinatura("assinaturaAval1");
-  limparAssinatura("assinaturaAval2");
 }
