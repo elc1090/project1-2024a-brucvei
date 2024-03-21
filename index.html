@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>FORMULÁRIO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!-- https://andreainfufsm.github.io/avaliatcc/atacc/ -->
+<div class="dark:bg-slate-800 dark:text-white">
+  <header>
+    <div class="container mx-auto p-4 border-b-4 border-solid border-sky-500">
+      <!--<div class="flex flex-wrap -mx-3 mb-6">-->
+      <div class="w-full px-3">
+        <div class="relative isolate overflow-hidden">
+          <h2 class="text-xl font-bold text-white">
+            ATA DE APRESENTAÇÃO DE TRABALHO DE CONCLUSÃO DE CURSO
+          </h2>
+        </div>
+      </div>
+      <!--</div>-->
+    </div>
+  </header>
+  <section>
+    <div class="container mx-auto">
+      <form action="#" method="POST" class="mx-auto max-w-xl sm:mt-10 dark:text-white">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div class="sm:col-span-2">
+            <label for="titulo" class="block text-sm font-semibold leading-6">Titulo do Trabalho</label>
+            <div class="mt-2.5">
+              <input type="text" name="titulo" id="titulo" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="aluno" class="block text-sm font-semibold leading-6">Nome do Aluno</label>
+            <div class="mt-2.5">
+              <input type="text" name="aluno" id="aluno" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="orientador" class="block text-sm font-semibold leading-6">Nome do Professor(a)
+              Orientador(a)</label>
+            <div class="mt-2.5">
+              <input type="text" name="orientador" id="orientador" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="avaliador1" class="block text-sm font-semibold leading-6">Nome do Professor(a) Avaliador(a)
+              1</label>
+            <div class="mt-2.5">
+              <input type="text" name="avaliador1" id="avaliador1" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="avaliador2" class="block text-sm font-semibold leading-6">Nome do Professor(a) Avaliador(a)
+              2</label>
+            <div class="mt-2.5">
+              <input type="text" name="avaliador2" id="avaliador2" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="curso" class="block text-sm font-semibold leading-6">Curso</label>
+            <div class="mt-2.5">
+              <input type="text" name="curso" id="curso" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="nota" class="block text-sm font-semibold leading-6">Nota Final</label>
+            <div class="mt-2.5">
+              <input type="number" name="nota" id="nota" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 border-b-4 border-solid border-sky-500 py-2"></div>
+
+          <div>
+            <label for="data" class="block text-sm font-semibold leading-6">Data</label>
+            <div class="mt-2.5">
+              <input type="datetime-local" name="data" id="data" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="sala" class="block text-sm font-semibold leading-6">Sala</label>
+            <div class="mt-2.5">
+              <input type="text" name="sala" id="sala" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 border-b-4 border-solid border-sky-500 py-2"></div>
+
+          <div class="sm:col-span-2">
+            <h2 class="text-base font-semibold leading-7 text-amber-500">Observação!!!</h2>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="data-final" class="block text-sm font-semibold leading-6">Data Final para entregar a cópia
+              definitiva do Trabalho de Graduação</label>
+            <div class="mt-2.5">
+              <input type="date" name="data-final" id="data-final" required
+                     class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 border-b-4 border-solid border-sky-500 py-2"></div>
+
+          <div>
+            <label for="sala" class="block text-sm font-semibold leading-6">Assinatura do Estudante</label>
+            <div class="mt-2.5">
+              <canvas id="assinatura-estudante"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></canvas>
+            </div>
+          </div>
+          <div>
+            <label for="sala" class="block text-sm font-semibold leading-6">Assinatura do(a) Orientador(a)</label>
+            <div class="mt-2.5">
+              <canvas id="assinatura-orientador"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></canvas>
+            </div>
+          </div>
+          <div>
+            <label for="sala" class="block text-sm font-semibold leading-6">Assinatura do(a) Avaliador(a) 1</label>
+            <div class="mt-2.5">
+              <canvas id="assinatura-avaliador1"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></canvas>
+            </div>
+          </div>
+          <div>
+            <label for="sala" class="block text-sm font-semibold leading-6">Assinatura do(a) Avaliador(a) 2</label>
+            <div class="mt-2.5">
+              <canvas id="assinatura-avaliador2"
+                      class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset bg-slate-600 ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <button type="submit"
+                  class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            Gerar PDF
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+<script src="gerarLink.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="geradorPdf.js"></script>
+<script src="assinatura.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
