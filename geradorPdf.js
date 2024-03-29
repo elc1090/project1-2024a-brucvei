@@ -1,4 +1,5 @@
 document.getElementById("generatePDF").addEventListener("click", function () {
+  document.getElementById("loader").classList.remove("hide-loader");
   // Create a instancia jspdf
   const doc = new jspdf.jsPDF();
   doc.setFontSize(12);
@@ -88,7 +89,12 @@ document.getElementById("generatePDF").addEventListener("click", function () {
   doc.text(local, 115, 190);
 
   // Save the PDF
-  doc.save("filled_form.pdf");
+  try{
+    doc.save("filled_form.pdf");
+  }catch(e){
+    alert("Erro ao gerar o PDF " + e);
+  }
+  document.getElementById("loader").classList.add("hide-loader");
 });
 
 function numeroParaMes(numero) {
